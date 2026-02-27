@@ -30,7 +30,7 @@ export default function WhyChoose() {
         <h2 className="text-3xl font-bold text-center text-gray-900">
           Why Choose Cobagage
         </h2>
-        <p className="max-w-2xl mx-auto text-center text-gray-600 mt-3">
+        <p className="m-auto max-w-2xl mx-auto text-center text-gray-600 mt-3">
           Our platform offers unique benefits for both travelers and shoppers
         </p>
 

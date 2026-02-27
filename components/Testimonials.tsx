@@ -32,7 +32,7 @@ export default function Testimonials() {
         <h2 className="text-3xl font-bold text-center text-gray-900">
           What Our Community Says
         </h2>
-        <p className="max-w-2xl mx-auto text-center text-gray-600 mt-3">
+        <p className="m-auto max-w-2xl mx-auto text-center text-gray-600 mt-3">
           Join thousands of satisfied travelers and shoppers from around the
           globe
         </p>

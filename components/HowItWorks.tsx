@@ -36,7 +36,7 @@ export default function HowItWorks() {
         <h2 className="text-3xl font-bold text-center text-gray-900">
           How It Works
         </h2>
-        <p className="sm:w-1/2 max-w-2xl mx-auto text-center text-gray-600 mt-3">
+        <p className="m-auto sm:w-1/2 max-w-2xl mx-auto text-center text-gray-600 mt-3">
           Our platform makes global shopping and earning while traveling simple
           and secure
         </p>
