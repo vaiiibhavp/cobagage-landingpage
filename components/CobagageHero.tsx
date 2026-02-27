@@ -7,7 +7,7 @@ const IMG_VECTOR = "./File_icon/hugeicons_ai-magic.svg";
 
 export default function CobagageHero() {
   return (
-    <section className="bg-white">
+    <section id="/" className="bg-white">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 lg:py-32">
         <div className="flex flex-col-reverse md:flex-row items-center gap-12">
           {/* Left: copy */}

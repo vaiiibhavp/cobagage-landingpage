@@ -4,7 +4,7 @@ const LOGO = "./File_img/CobagageLogo 1.png";
 
 export default function Header() {
   return (
-    <header className="bg-white border-b">
+    <header className="bg-white border-b sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <a href="#" aria-label="Cobagage home" className="block w-28">
