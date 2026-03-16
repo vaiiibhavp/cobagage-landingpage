@@ -19,15 +19,14 @@ export default function Header() {
           <Link href="/#about">About Us</Link>
           <Link href="/#how-it-works">How It Works</Link>
           <Link href="/#faqs">FAQs</Link>
-          <Link href="/contact">Contact Us</Link>
         </nav>
-        <div className="flex gap-4">
-          <button className="flex justify-center text-nowrap items-center px-[13px] py-[1px] w-[68px] h-[36px] bg-white border border-gray-300 rounded-full">
-            Login
-          </button>
-          <button className="flex justify-center items-center text-nowrap px-[13px] py-[1px] w-[68px] h-[36px] bg-[#DB5928] text-white border border-[#DB5928] rounded-full hover:opacity-90">
-            Sing Up
-          </button>
+        <div className="ml-4">
+          <Link
+            href="contact"
+            className="inline-block bg-[#DB5928] text-white px-4 py-2 rounded-md shadow-md hover:opacity-95"
+          >
+            Contact Us
+          </Link>
         </div>
       </div>
     </header>
