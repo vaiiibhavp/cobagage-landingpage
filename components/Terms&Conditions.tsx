@@ -87,6 +87,8 @@ export default function TermsConditions() {
                     </p>
 
                     {/* Sub Heading */}
+
+
                     <h4
                         style={{
                             fontFamily: "Poppins, sans-serif",
@@ -101,6 +103,7 @@ export default function TermsConditions() {
                     </h4>
 
                     <p
+
                         style={{
                             fontFamily: "Poppins, sans-serif",
                             fontSize: "18px",
