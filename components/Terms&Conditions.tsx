@@ -108,10 +108,17 @@ export default function TermsConditions() {
                             color: "#4B5563",
                         }}
                     >
-                        Sed feugiat congue fusce adipiscing magna nunc odio arcu. Aliquam eu
-                        malesuada volutpat eu facilisis gravida. Velit volutpat urna cras
-                        malesuada ultricies tempus imperdiet nisl. Orci scelerisque vel
-                        euismod nunc est aliquet.
+                        Sed feugiat congue fusce adipiscing magna nunc odio arcu. Aliquam eu malesuada volutpat eu facilisis gravida. Velit volutpat urna cras malesuada ultricies tempus imperdiet nisl. Orci scelerisque vel euismod nunc est aliquet. Amet proin mauris parturient felis sit montes et blandit. Euismod tristique tempor risus ipsum purus ipsum. Diam eget volutpat urna egestas tristique purus interdum turpis. Morbi neque urna lorem nunc quisque nullam tortor.
+                    </p>
+                    <p
+                        style={{
+                            fontFamily: "Poppins, sans-serif",
+                            fontSize: "18px",
+                            lineHeight: "30px",
+                            color: "#4B5563",
+                        }}
+                    >
+                        Senectus vel velit augue adipiscing neque et etiam id leo. Et turpis ac felis vitae. Proin vel sit massa lacus maecenas lacus pharetra integer pretium. Velit neque elementum tellus consequat id proin enim. Tellus nibh egestas neque in faucibus. Urna amet arcu sollicitudin tellus aliquam imperdiet pulvinar maecenas. Nam auctor ut eu sed non. Sit lacus mi volutpat felis non dignissim posuere. Nisl lacinia fermentum enim volutpat eu viverra. Ut urna elementum gravida aliquam. Quis blandit arcu fusce scelerisque ullamcorper amet. In amet varius aliquam convallis vestibulum dictum.
                     </p>
                 </div>
 
