@@ -129,7 +129,8 @@ export default function ContactUsSection() {
                 <div className="mb-10">
                     <h3 className="text-[32px] font-bold">   {t("title")}</h3>
                     <p className="text-gray-500 text-[32px] dark:text-gray-300 mt-2">
-                        {t("subtitle")}
+                        {t("subtitle")} <br />
+                        {t("subtitlepart")}
                     </p>
                 </div>
 

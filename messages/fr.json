@@ -185,7 +185,8 @@
 },
 "contact": {
   "title": "Contactez-nous",
-  "subtitle": "Remplissez le formulaire ci-dessous et partagez vos idées de projet avec nous.",
+  "subtitle": "Remplissez le formulaire ci-dessous et partagez",
+  "subtitlepart": "vos idées de projet avec nous.",
 
   "fields": {
     "name": "Nom",

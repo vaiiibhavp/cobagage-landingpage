@@ -185,7 +185,8 @@
 },
 "contact": {
   "title": "Contact Us",
-  "subtitle": "Fill out the contact form below and share your project ideas with us.",
+  "subtitle": "Fill out the contact form below and share",
+   "subtitlepart": "your project ideas with us.",
 
   "fields": {
     "name": "Name",
