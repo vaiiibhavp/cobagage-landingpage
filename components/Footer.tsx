@@ -9,7 +9,8 @@ export default function Footer() {
   const t = useTranslations("footer");
   console.log(t("description"));
   const locale = useLocale();
-  console.log("ACTIVE LOCALE:", locale);
+  const L = (path: string) => `/${locale}${path}`;
+
 
   return (
     <footer className="bg-[#0b1417] text-gray-300">
@@ -37,11 +38,35 @@ export default function Footer() {
           </h4>
 
           <ul className="space-y-2 text-sm text-gray-400">
-            <li><a href="#" className="hover:text-white">{t("quickLinks.home")}</a></li>
-            <li><a href="#about" className="hover:text-white">{t("quickLinks.about")}</a></li>
-            <li><a href="#how-it-works" className="hover:text-white">{t("quickLinks.how")}</a></li>
-            <li><a href="#faqs" className="hover:text-white">{t("quickLinks.faqs")}</a></li>
-            <li><a href="#contact" className="hover:text-white">{t("quickLinks.contact")}</a></li>
+            <li>
+              <Link href={L("/#")} className="hover:text-white">
+                {t("quickLinks.home")}
+              </Link>
+            </li>
+
+            <li>
+              <Link href={L("/#about")} className="hover:text-white">
+                {t("quickLinks.about")}
+              </Link>
+            </li>
+
+            <li>
+              <Link href={L("/#how-it-works")} className="hover:text-white">
+                {t("quickLinks.how")}
+              </Link>
+            </li>
+
+            <li>
+              <Link href={L("/#faqs")} className="hover:text-white">
+                {t("quickLinks.faqs")}
+              </Link>
+            </li>
+
+            <li>
+              <Link href={L("/contact")} className="hover:text-white">
+                {t("quickLinks.contact")}
+              </Link>
+            </li>
           </ul>
         </div>
 

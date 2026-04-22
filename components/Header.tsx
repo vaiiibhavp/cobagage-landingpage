@@ -13,6 +13,7 @@ export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
 
+
   // ✅ derive locale from URL (MOST RELIABLE)
   const locale = pathname.split("/")[1] || "en";
 
@@ -48,22 +49,24 @@ export default function Header() {
         <div className="flex items-center gap-4">
 
           {/* Language Toggle */}
-          <div className="flex items-center gap-2 border rounded-md px-2 py-1">
+          <div className="flex items-center gap-2 border rounded-md px-1 py-1">
 
             <button
               onClick={() => switchLanguage("en")}
-              className={`px-2 py-1 text-sm rounded transition ${locale === "en" ? "bg-gray-200 font-semibold" : ""
+              className={`flex items-center gap-2 px-2 py-1 text-sm rounded transition ${locale === "en" ? "bg-gray-200 font-semibold" : ""
                 }`}
             >
-              🇬🇧 EN
+              <img src="/File_icon/SvgCustomUsa.svg" className="w-5 h-5" />
+              EN
             </button>
 
             <button
               onClick={() => switchLanguage("fr")}
-              className={`px-2 py-1 text-sm rounded transition ${locale === "fr" ? "bg-gray-200 font-semibold" : ""
+              className={`flex items-center gap-2 px-2 py-1 text-sm rounded transition ${locale === "fr" ? "bg-gray-200 font-semibold" : ""
                 }`}
             >
-              🇫🇷 FR
+              <img src="/File_icon/SvgCustomFrance.svg" className="w-5 h-5" />
+              FR
             </button>
 
           </div>
