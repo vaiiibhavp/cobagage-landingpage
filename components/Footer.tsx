@@ -3,15 +3,26 @@ import Link from "next/link";
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const LOGO = "./File_img/CobagageLogo 1.png";
 
 export default function Footer() {
   const t = useTranslations("footer");
   console.log(t("description"));
-  const locale = useLocale();
-  const L = (path: string) => `/${locale}${path}`;
+  const pathname = usePathname();
 
+
+  // ✅ derive locale from URL (MOST RELIABLE)
+  const locale = pathname.split("/")[1] || "en";
+
+  // const L = (path: string) => {
+  //   if (path.startsWith("/#")) {
+  //     return `/${locale}${path}`;
+  //   }
+  //   return `/${locale}${path}`;
+  // };
+  console.log(locale)
 
   return (
     <footer className="bg-[#0b1417] text-gray-300">
@@ -88,31 +99,31 @@ export default function Footer() {
 
           <ul className="space-y-2 text-sm text-gray-400">
             <li>
-              <Link href={L("/#")} className="hover:text-white">
+              <Link href={`/${locale}`} className="hover:text-white">
                 {t("quickLinks.home")}
               </Link>
             </li>
 
             <li>
-              <Link href={L("/#about")} className="hover:text-white">
+              <Link href={`/${locale}/#about`} className="hover:text-white">
                 {t("quickLinks.about")}
               </Link>
             </li>
 
             <li>
-              <Link href={L("/#how-it-works")} className="hover:text-white">
+              <Link href={`/${locale}/#how-it-works`} className="hover:text-white">
                 {t("quickLinks.how")}
               </Link>
             </li>
 
             <li>
-              <Link href={L("/#faqs")} className="hover:text-white">
+              <Link href={`/${locale}/#faqs`} className="hover:text-white">
                 {t("quickLinks.faqs")}
               </Link>
             </li>
 
             <li>
-              <Link href={L("/contact")} className="hover:text-white">
+              <Link href={`/${locale}/contact`} className="hover:text-white">
                 {t("quickLinks.contact")}
               </Link>
             </li>
