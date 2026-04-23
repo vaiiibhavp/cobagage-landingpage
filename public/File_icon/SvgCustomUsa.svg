@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
+  <clipPath id="t">
+    <path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/>
+  </clipPath>
+
+  <path d="M0,0v30h60v-30z" fill="#b22234"/>
+  <path d="M0,3h60v3h-60zm0,6h60v3h-60zm0,6h60v3h-60zm0,6h60v3h-60zm0,6h60v3h-60z" fill="#fff"/>
+  <path d="M0,0h30v15h-30z" fill="#3c3b6e"/>
+</svg>

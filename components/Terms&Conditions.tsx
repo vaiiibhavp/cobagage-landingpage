@@ -1,6 +1,10 @@
+"use client"
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function TermsConditions() {
+    const t = useTranslations("terms");
+
     return (
         <section className="py-5 bg-white">
             <div className="container px-5">
@@ -16,7 +20,7 @@ export default function TermsConditions() {
                                 marginBottom: 0,
                             }}
                         >
-                            Cobagage Terms and Conditions
+                            {t("title")}
                         </h2>
 
 

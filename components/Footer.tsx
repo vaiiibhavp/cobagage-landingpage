@@ -1,20 +1,46 @@
+"use client";
 import Link from "next/link";
 import React from "react";
-
+import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const LOGO = "./File_img/CobagageLogo 1.png";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+  console.log(t("description"));
+  const pathname = usePathname();
+
+
+  // ✅ derive locale from URL (MOST RELIABLE)
+  const locale = pathname.split("/")[1] || "en";
+
+  // const L = (path: string) => {
+  //   if (path.startsWith("/#")) {
+  //     return `/${locale}${path}`;
+  //   }
+  //   return `/${locale}${path}`;
+  // };
+  console.log(locale)
+
   return (
     <footer className="bg-[#0b1417] text-gray-300">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+        {/* Logo + description */}
         <div>
           <a href="#" className="block w-36 mb-4">
-            <img src={LOGO} alt="Cobagage" className="w-full h-auto" />
+            <Image
+              src="/File_img/CobagageLogo 1.png"
+              alt="Cobagage"
+              width={144}
+              height={40}
+            />
           </a>
+
           <p className="text-sm text-gray-400">
-            Connecting travelers and shoppers worldwide through a secure and
-            community-driven marketplace.
+            {t("description")}
           </p>
 
           <div className="mt-4 flex items-center gap-3 text-gray-400">
@@ -65,94 +91,98 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Quick Links */}
         <div>
-          <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+          <h4 className="text-white font-semibold mb-4">
+            {t("quickLinks.title")}
+          </h4>
+
           <ul className="space-y-2 text-sm text-gray-400">
             <li>
-              <a href="#" className="hover:text-white">
-                Home
-              </a>
+              <Link href={`/${locale}`} className="hover:text-white">
+                {t("quickLinks.home")}
+              </Link>
             </li>
+
             <li>
-              <a href="#about" className="hover:text-white">
-                About Us
-              </a>
+              <Link href={`/${locale}/#about`} className="hover:text-white">
+                {t("quickLinks.about")}
+              </Link>
             </li>
+
             <li>
-              <a href="#how-it-works" className="hover:text-white">
-                How It Works
-              </a>
+              <Link href={`/${locale}/#how-it-works`} className="hover:text-white">
+                {t("quickLinks.how")}
+              </Link>
             </li>
+
             <li>
-              <a href="#faqs" className="hover:text-white">
-                FAQs
-              </a>
+              <Link href={`/${locale}/#faqs`} className="hover:text-white">
+                {t("quickLinks.faqs")}
+              </Link>
             </li>
+
             <li>
-              <a href="#contact" className="hover:text-white">
-                Contact Us
-              </a>
+              <Link href={`/${locale}/contact`} className="hover:text-white">
+                {t("quickLinks.contact")}
+              </Link>
             </li>
           </ul>
         </div>
 
+        {/* Legal */}
         <div>
-          <h4 className="text-white font-semibold mb-4">Legal</h4>
+          <h4 className="text-white font-semibold mb-4">
+            {t("legal.title")}
+          </h4>
+
           <ul className="space-y-2 text-sm text-gray-400">
             <li>
-              <Link href="/terms&conditions" className="hover:text-white text-decoration-none">
-                Terms & Conditions
+              <Link href="/terms&conditions" className="hover:text-white">
+                {t("legal.terms")}
               </Link>
             </li>
             <li>
-              <Link href="/privacyPolicy" className="hover:text-white text-decoration-none">
-                Privacy Policy
+              <Link href="/privacyPolicy" className="hover:text-white">
+                {t("legal.privacy")}
               </Link>
             </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Cookie Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Shipping Policy
-              </a>
-            </li>
+            <li><a href="#" className="hover:text-white">{t("legal.cookie")}</a></li>
+            <li><a href="#" className="hover:text-white">{t("legal.shipping")}</a></li>
           </ul>
         </div>
 
+        {/* Contact */}
         <div>
-          <h4 className="text-white font-semibold mb-4">Contact Us</h4>
+          <h4 className="text-white font-semibold mb-4">
+            {t("contact.title")}
+          </h4>
+
           <address className="not-italic text-sm text-gray-400">
-            1234 Global Street
-            <br />
-            New York, NY 10001
-            <br />
-            United States
+            {t("contact.address")}
           </address>
+
           <div className="mt-4 text-sm text-gray-400">
             hello@Cobagage.com
             <br />
             +1 (234) 567-890
           </div>
         </div>
+
       </div>
 
+      {/* Bottom bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
-          <div>© 2025 Cobagage. All rights reserved.</div>
+
+          <div>{t("bottom.copy")}</div>
+
           <div className="mt-3 md:mt-0 flex items-center gap-6">
-            <a href="#" className="hover:text-white">
-              Terms
-            </a>
-            <a href="#" className="hover:text-white">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-white">
-              Cookies
-            </a>
+            <a href="#" className="hover:text-white">{t("bottom.terms")}</a>
+            <a href="#" className="hover:text-white">{t("bottom.privacy")}</a>
+            <a href="#" className="hover:text-white">{t("bottom.cookies")}</a>
           </div>
+
         </div>
       </div>
     </footer>

@@ -1,6 +1,9 @@
+"use client";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function PrivacyPolicy() {
+    const t = useTranslations("privacy");
     return (
         <section className="py-5 bg-white">
             <div className="container px-5">
@@ -16,7 +19,7 @@ export default function PrivacyPolicy() {
                                 marginBottom: 0,
                             }}
                         >
-                            Cobagage Privacy Policy
+                            {t("title")}
                         </h2>
 
 

@@ -1,0 +1,216 @@
+{
+  "header": {
+    "home": "Accueil",
+    "about": "À propos",
+    "howItWorks": "Comment ça marche",
+    "faqs": "FAQs",
+    "contact": "Contactez-nous"
+  },
+   "hero": {
+    "title1": "Achetez dans le monde entier",
+    "title2": "Grâce aux voyageurs",
+    "description": "Connectez-vous avec des voyageurs du monde entier pour obtenir des articles uniques ou gagnez de l'argent en répondant aux demandes d'achat.",
+    "getStarted": "Commencer",
+    "learnMore": "En savoir plus"
+  },
+   "howItWorks": {
+    "title": "Comment ça marche",
+    "subtitle": "Notre plateforme rend l'achat mondial et les revenus en voyage simples et sécurisés",
+    "steps": {
+      "step1": {
+        "title": "Inscription",
+        "desc": "Créez un compte en tant que voyageur ou acheteur"
+      },
+      "step2": {
+        "title": "Connexion & Demande",
+        "desc": "Les acheteurs demandent des articles, les voyageurs acceptent les demandes compatibles avec leurs voyages"
+      },
+      "step3": {
+        "title": "Paiement sécurisé",
+        "desc": "Transactions sécurisées avec paiement retenu jusqu'à la confirmation de livraison"
+      },
+      "step4": {
+        "title": "Livraison & Avis",
+        "desc": "Le voyageur livre l'article et les deux parties laissent un avis"
+      }
+    }
+  },
+  "forTravelers": {
+    "title": "Pour les voyageurs",
+    "items": [
+      "Gagnez de l'argent en répondant aux demandes d'achat pendant vos voyages",
+      "Vendez les articles dont vous n'avez plus besoin pendant votre voyage",
+      "Faites don de biens et ayez un impact positif",
+      "Connectez-vous avec les habitants et améliorez votre expérience de voyage"
+    ]
+  },
+   "forShoppers": {
+    "title": "Pour les acheteurs",
+    "items": [
+      "Demandez des articles uniques du monde entier",
+      "Économisez sur les frais d'expédition internationale et de douane",
+      "Envoyez des pourboires aux voyageurs qui réalisent vos demandes",
+      "Suivez votre commande en temps réel"
+    ]
+  },
+   "footer": {
+    "description": "Connecter les voyageurs et les acheteurs du monde entier via une plateforme sécurisée et communautaire.",
+
+    "quickLinks": {
+      "title": "Liens rapides",
+      "home": "Accueil",
+      "about": "À propos",
+      "how": "Comment ça marche",
+      "faqs": "FAQs",
+      "contact": "Contactez-nous"
+    },
+
+    "legal": {
+      "title": "Légal",
+      "terms": "Conditions générales",
+      "privacy": "Politique de confidentialité",
+      "cookie": "Politique des cookies",
+      "shipping": "Politique d'expédition"
+    },
+
+    "contact": {
+      "title": "Contactez-nous",
+      "address": "1234 Rue Global\nNew York, NY 10001\nÉtats-Unis"
+    },
+
+    "bottom": {
+      "copy": "© 2025 Cobagage. Tous droits réservés.",
+      "terms": "Conditions",
+      "privacy": "Confidentialité",
+      "cookies": "Cookies"
+    }
+  },
+   "whyChoose": {
+    "title": "Pourquoi choisir Cobagage",
+    "subtitle": "Notre plateforme offre des avantages uniques pour les voyageurs et les acheteurs",
+
+    "features": {
+      "earn": {
+        "title": "Gagner",
+        "desc": "Gagnez de l'argent pendant vos voyages en répondant aux demandes d'achat du monde entier."
+      },
+      "save": {
+        "title": "Économiser",
+        "desc": "Obtenez des articles directement à la source en évitant les frais d'expédition internationaux élevés."
+      },
+      "connect": {
+        "title": "Connecter",
+        "desc": "Construisez un réseau mondial de voyageurs et d'acheteurs aux intérêts communs."
+      },
+      "share": {
+        "title": "Partager",
+        "desc": "Vivez un échange culturel à travers le marché mondial des biens et des histoires."
+      }
+    },
+
+    "stats": {
+      "countries": "Pays couverts",
+      "travelers": "Voyageurs actifs",
+      "shoppers": "Acheteurs satisfaits",
+      "satisfaction": "Taux de satisfaction"
+    }
+  },
+   "faq": {
+    "title": "Foire Aux Questions",
+    "subtitle": "Trouvez les réponses aux questions fréquemment posées sur notre plateforme",
+    "items": [
+      {
+        "q": "Comment commencer en tant que voyageur ?",
+        "a": "Inscrivez-vous et complétez votre profil pour commencer à recevoir des demandes."
+      },
+      {
+        "q": "Comment fonctionne le paiement ?",
+        "a": "Les paiements sont retenus jusqu'à la confirmation de livraison pour protéger les deux parties."
+      },
+      {
+        "q": "Que faire si l'article est endommagé ?",
+        "a": "Vous pouvez ouvrir un litige; notre équipe examinera le cas."
+      },
+      {
+        "q": "Puis-je demander n'importe quel article dans le monde ?",
+        "a": "Oui, selon la disponibilité et les restrictions locales."
+      },
+      {
+        "q": "Comment communiquer avec le voyageur/acheteur ?",
+        "a": "Vous pouvez discuter directement via la messagerie de la plateforme."
+      },
+      {
+        "q": "Y a-t-il des frais d'utilisation ?",
+        "a": "L'utilisation de base est gratuite, mais des frais de service peuvent s'appliquer."
+      }
+    ]
+  },
+   "testimonials": {
+    "title": "Ce que dit notre communauté",
+    "subtitle": "Rejoignez des milliers de voyageurs et acheteurs satisfaits du monde entier",
+    "items": [
+      {
+        "name": "Alex Johnson",
+        "text": "J'ai pu financer mes voyages en Asie en répondant à des demandes d'achat. Non seulement je gagne de l'argent, mais je rencontre aussi des personnes intéressantes.",
+        "desc": "Voyageur • New York, USA",
+        "avatar": "./File_img/Alex Johnson.png",
+        "rating": 5
+      },
+      {
+        "name": "Priya Sharma",
+        "text": "Cobagage m'a permis d'obtenir des produits de soin français authentiques à un prix très réduit. Le voyageur m'a même donné des conseils d'utilisation !",
+        "desc": "Acheteuse • Mumbai, Inde",
+        "avatar": "./File_img/Priya Sharma.png",
+        "rating": 5
+      },
+      {
+        "name": "Carlos Mendez",
+        "text": "Voyageant souvent pour affaires, je transforme mes déplacements en opportunités de revenus supplémentaires tout en aidant les autres.",
+        "desc": "Voyageur • Madrid, Espagne",
+        "avatar": "./File_img/Carlos Mendez.png",
+        "rating": 4
+      }
+    ]
+  },
+   "cta": {
+    "title": "Prêt à commencer votre voyage d'achat mondial ?",
+    "subtitle": "Rejoignez des milliers de voyageurs et d'acheteurs connectés à travers le monde pour partager des produits et expériences uniques.",
+    "button": "Télécharger l'application"
+  },
+  "terms": {
+    "title": "Conditions générales de Cobagage"
+  },
+  "privacy": {
+  "title": "Politique de confidentialité Cobagage"
+},
+"contact": {
+  "title": "Contactez-nous",
+  "subtitle": "Remplissez le formulaire ci-dessous et partagez",
+  "subtitlepart": "vos idées de projet avec nous.",
+
+  "fields": {
+    "name": "Nom",
+    "email": "Email",
+    "company": "Nom de l'entreprise",
+    "project": "À propos du projet"
+  },
+
+  "placeholders": {
+    "name": "Nom",
+    "email": "Email",
+    "company": "Entreprise",
+    "project": "Détails du projet"
+  },
+
+  "button": "Envoyer",
+  "sending": "Envoi..."
+},
+"messages": {
+  "required": "Ce champ est requis",
+  "invalidEmail": "Format d'email invalide",
+  "fillRequired": "Veuillez remplir les champs obligatoires",
+  "success": "Message envoyé avec succès !",
+  "error": "Une erreur s'est produite",
+  "invalidResponse": "Réponse du serveur invalide"
+}
+}

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import toast from "react-hot-toast";
+import { useTranslations } from "next-intl";
 
 type FormDataType = {
     name: string;
@@ -19,6 +20,9 @@ type ErrorType = {
 };
 
 export default function ContactUsSection() {
+    const t = useTranslations("contact");
+    const msg = useTranslations("messages");
+
     const [formData, setFormData] = useState<FormDataType>({
         name: "",
         email: "",
@@ -40,24 +44,24 @@ export default function ContactUsSection() {
     };
     // Validation
     const validate = () => {
-        let newErrors: ErrorType = {};   // ✅ FIXED
+        let newErrors: ErrorType = {};
 
         if (!formData.name.trim()) {
-            newErrors.name = "Name is required";
+            newErrors.name = msg("required");
         }
 
         if (!formData.email.trim()) {
-            newErrors.email = "Email is required";
+            newErrors.email = msg("required");
         } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-            newErrors.email = "Invalid email format";
+            newErrors.email = msg("invalidEmail");
         }
 
         if (!formData.companyName.trim()) {
-            newErrors.companyName = "Company name is required";
+            newErrors.companyName = msg("required");
         }
 
         if (!formData.projectDetails.trim()) {
-            newErrors.projectDetails = "Project details are required";
+            newErrors.projectDetails = msg("required");
         }
 
         setErrors(newErrors);
@@ -67,7 +71,7 @@ export default function ContactUsSection() {
     const API_URL = process.env.NEXT_PUBLIC_API_URL;
     const handleSubmit = async () => {
         if (!validate()) {
-            toast.error("Please fill Required Fields");
+            toast.error(msg("fillRequired"));
             return;
         }
 
@@ -83,18 +87,18 @@ export default function ContactUsSection() {
             });
 
             let data;
+
             try {
                 data = await res.json();
             } catch {
-                throw new Error("Invalid server response");
+                throw new Error(msg("invalidResponse"));
             }
 
             if (!res.ok) {
-                throw new Error(data.message || "Something went wrong");
+                throw new Error(data.message || msg("error"));
             }
 
-            // ✅ SUCCESS TOAST
-            toast.success(data.message || "Message sent successfully!");
+            toast.success(data.message || msg("success"));
 
             setFormData({
                 name: "",
@@ -104,11 +108,10 @@ export default function ContactUsSection() {
             });
 
         } catch (err) {
-            // ❌ ERROR TOAST
             if (err instanceof Error) {
                 toast.error(err.message);
             } else {
-                toast.error("Something went wrong");
+                toast.error(msg("error"));
             }
         } finally {
             setLoading(false);
@@ -124,10 +127,10 @@ export default function ContactUsSection() {
 
                 {/* Heading */}
                 <div className="mb-10">
-                    <h3 className="text-[32px] font-bold">Contact Us</h3>
+                    <h3 className="text-[32px] font-bold">   {t("title")}</h3>
                     <p className="text-gray-500 text-[32px] dark:text-gray-300 mt-2">
-                        Fill out the contact form below and share <br />
-                        your project ideas with us.
+                        {t("subtitle")} <br />
+                        {t("subtitlepart")}
                     </p>
                 </div>
 
@@ -136,36 +139,36 @@ export default function ContactUsSection() {
                     {/* Left Inputs */}
                     <div className="flex-1 w-full h-[272px] flex flex-col justify-between">
                         <div>
-                            <label className="block text-xs text-[#C7C7C7] uppercase mb-2">Name</label>
+                            <label className="block text-xs text-[#C7C7C7] uppercase mb-2">{t("fields.name")}</label>
                             <input
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                placeholder="Name"
+                                placeholder={t("placeholders.name")}
                                 className="w-full h-[50px] rounded-lg border border-gray-300 px-4 focus:outline-none focus:ring-2"
                             />
                             {errors.name && <p className="text-red-500">{errors.name}</p>}
                         </div>
                         {/* Email */}
                         <div>
-                            <label className="block text-xs text-[#C7C7C7] uppercase mb-2">Email</label>
+                            <label className="block text-xs text-[#C7C7C7] uppercase mb-2">{t("fields.email")}</label>
                             <input
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                placeholder="Email"
+                                placeholder={t("placeholders.email")}
                                 className="w-full h-[50px] rounded-lg border border-gray-300 px-4 focus:outline-none focus:ring-2"
                             />
                             {errors.email && <p className="text-red-500">{errors.email}</p>}
                         </div>
                         <div>
-                            <label className="block text-xs text-[#C7C7C7] uppercase mb-2">Company Name</label>
+                            <label className="block text-xs text-[#C7C7C7] uppercase mb-2">{t("fields.company")}</label>
                             {/* Company */}
                             <input
                                 name="companyName"
                                 value={formData.companyName}
                                 onChange={handleChange}
-                                placeholder="Company"
+                                placeholder={t("placeholders.company")}
                                 className="w-full h-[50px] rounded-lg border border-gray-300 px-4 focus:outline-none focus:ring-2"
                             />
                             {errors.companyName && <p className="text-red-500">{errors.companyName}</p>}
@@ -186,13 +189,13 @@ export default function ContactUsSection() {
 
                 {/* About Project - FULL WIDTH */}
                 <div className="mt-6 w-full">
-                    <label className="block text-xs text-[#C7C7C7] uppercase mb-2">About Project</label>
+                    <label className="block text-xs text-[#C7C7C7] uppercase mb-2">{t("fields.project")}</label>
                     {/* Project */}
                     <textarea
                         name="projectDetails"
                         value={formData.projectDetails}
                         onChange={handleChange}
-                        placeholder="Project Details"
+                        placeholder={t("placeholders.project")}
                         className="w-full h-[120px] rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 resize-none"
                     />
                     {errors.projectDetails && <p className="text-red-500">{errors.projectDetails}</p>}
@@ -207,7 +210,7 @@ export default function ContactUsSection() {
                         disabled={loading}
                         className="bg-orange-500 text-white px-6 py-2 mt-4"
                     >
-                        {loading ? "Sending..." : "Send Now"}
+                        {loading ? t("sending") : t("button")}
                     </button>
 
                 </div>
